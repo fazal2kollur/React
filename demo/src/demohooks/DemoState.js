@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const StateTutorial = () => {
+const DemoState = () => {
     const [name, setName] = useState("Fazal");
 
     let onChange = (event) => {
@@ -18,4 +18,4 @@ const StateTutorial = () => {
     );
 };
 
-export default StateTutorial;
+export default DemoState;

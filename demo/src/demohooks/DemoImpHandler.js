@@ -1,21 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-const StateTutorial = () => {
-    const [name, setName] = useState("Fazal");
+ 
 
-    let onChange = (event) => {
-        const newValue = event.target.value;
-        setName(newValue);
-    };
+const DemoHandler = () => {
+  const [name, setName] = useState("Fazal");
+ 
 
-    return (
-        <>
-            <form>
-                <input placeholder="Typing..." onChange={onChange} />
-                {name}
-            </form>
-        </>
-    );
+  return (
+      <>
+          {name}
+      </>
+  );
 };
 
-export default StateTutorial;
+export default DemoHandler;

@@ -1,21 +1,18 @@
-import { useState } from "react";
+import React, { useRef } from "react";
 
-const StateTutorial = () => {
-    const [name, setName] = useState("Fazal");
+const DemoRef = () => {
+  const inputRef = useRef(null);
 
-    let onChange = (event) => {
-        const newValue = event.target.value;
-        setName(newValue);
-    };
+  const onClick = () => {
+    inputRef.current.value = "";
+  };
+  return (
+    <div>
+      <h1>Fazal</h1>
+      <input type="text" placeholder="Type..." ref={inputRef} />
+      <button onClick={onClick}>Change</button>
+    </div>
+  );
+}
 
-    return (
-        <>
-            <form>
-                <input placeholder="Typing..." onChange={onChange} />
-                {name}
-            </form>
-        </>
-    );
-};
-
-export default StateTutorial;
+export default DemoRef;

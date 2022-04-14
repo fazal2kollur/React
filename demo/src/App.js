@@ -11,7 +11,7 @@ import DemoCallBack from "./demohooks/DemoCallback";
 function App() {
   return (
     <div className="App">
-      <DemoState/>
+      <DemoReducer />
     </div>
   );
 }
